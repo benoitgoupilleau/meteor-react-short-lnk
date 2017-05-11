@@ -29,20 +29,22 @@ export default class Signup extends React.Component {
   }
   render(){
     return (
-      <div>
-        <h1>Join Short Lnk</h1>
+      <div className="boxed-view">
+        <div className="boxed-view__box">
+          <h1>Join Short Lnk</h1>
 
-        {this.state.error ? <p>{this.state.error}</p> : undefined}
+          {this.state.error ? <p>{this.state.error}</p> : undefined}
 
-        <form onSubmit={this.onSubmit.bind(this)} noValidate>
-          <input type="email" ref="email" name="email" placeholder="Email"/>
-          <input type="password" ref="password" name="password" placeholder="Password"/>
-          <button>Create Account</button>
-        </form>
-        {/* <p>{this.state.count}</p> */}
-        {/* <button onClick={this.increment.bind(this)}>+1</button>
-        <button onClick={()=>this.setState({count: this.state.count -1})}>-1</button> */}
-        <Link to="/">Already have an account?</Link>
+          <form onSubmit={this.onSubmit.bind(this)} noValidate className="boxed-view__form">
+            <input type="email" ref="email" name="email" placeholder="Email"/>
+            <input type="password" ref="password" name="password" placeholder="Password"/>
+            <button className="button">Create Account</button>
+          </form>
+          {/* <p>{this.state.count}</p> */}
+          {/* <button onClick={this.increment.bind(this)}>+1</button>
+          <button onClick={()=>this.setState({count: this.state.count -1})}>-1</button> */}
+          <Link to="/">Already have an account?</Link>
+        </div>
       </div>
     );
   }
